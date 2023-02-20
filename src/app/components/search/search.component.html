@@ -2,7 +2,7 @@
 <button (click)="search()">search</button>
 <ng-container *ngIf="searched">
   <ng-container *ngIf="searchResult$ | async as result">
-    <div *ngFor="let movie of result.search">
+    <div *ngFor="let movie of result.Results">
       <h2>{{movie.Title}}</h2>
       <p>Year: {{ movie.Year }}</p>
       <p>Type: {{ movie.Type }}</p>

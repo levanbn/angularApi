@@ -7,7 +7,6 @@ export interface Movie{
 }
 
 export interface result{
-search: any;
   Results : SearchResult[];
 }
 export interface SearchResult{
