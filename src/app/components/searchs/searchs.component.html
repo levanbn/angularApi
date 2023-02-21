@@ -1,6 +1,6 @@
-<input type="text" [formControl]="first" />
-<input type="text" [formControl]="second" />
-<input type="text" [formControl]="third" />
+<input type="text" [(ngModel)]="first"/>
+<input type="text" [(ngModel)]="second"/>
+<input type="text" [(ngModel)]="third"/>
 <button (click)="send()">enter</button>
 <ng-container *ngIf="minutesLength$ | async as bla">
   <p>The length of all the movies combined in minutes: {{ bla }}</p>
