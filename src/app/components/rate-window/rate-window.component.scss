@@ -1,0 +1,121 @@
+.screen {
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.6);
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .container {
+    width: 600px;
+    min-height: 290px;
+    height: 290px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .big-star {
+      filter: invert(62%) sepia(24%) saturate(5489%) hue-rotate(190deg)
+        brightness(98%) contrast(91%);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      position: absolute;
+      top: -11px;
+      z-index: 3;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .closeBtn {
+      position: absolute;
+      right: 20px;
+      top: -60px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      color: #f5c518;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 1.5px;
+      margin: 60px 0 0;
+    }
+
+    h1 {
+      margin-block: 8px;
+      font-size: 19px;
+      color: #fff;
+    }
+
+    .stars {
+      margin-block: 8px 0;
+      display: flex;
+      gap: 10px;
+
+      button {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+
+        img {
+          max-width: 32px;
+        }
+      }
+    }
+
+    .cont {
+      margin-block: 32px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      width: 330px;
+
+      .textArea {
+        text-indent: 5px;
+        border-radius: 5px;
+        width: 240px;
+        height: 80px;
+        resize: none;
+      }
+
+      .rate-button {
+        width: 80px;
+        height: 35px;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+        border: none;
+      }
+
+      .clicked {
+        background-color: #f5c518;
+        color: #000;
+        cursor: pointer;
+      }
+    }
+  }
+}

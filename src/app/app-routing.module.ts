@@ -1,36 +1,36 @@
-import { ThreeSearchComponent } from './components/three-search/three-search.component';
+import { SearchsComponent } from './components/searchs/searchs.component';
 import { HomeComponent } from './components/home/home.component';
-import { MyVoteComponent } from './components/my-vote/my-vote.component';
-import { ResultComponent } from './components/result/result.component';
-import { SearchComponent } from './components/search/search.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { InputComponent } from './components/input/input.component';
+import { RatedMoviesComponent } from './components/rated-movies/rated-movies.component';
+import { ResultComponent } from './components/result/result.component';
 
 const routes: Routes = [
   {
-    path:"",
-    component:HomeComponent,
+    path: '',
+    component: HomeComponent,
   },
   {
-    path:"result",
-    component:ResultComponent,
+    path: 'input',
+    component: InputComponent,
   },
   {
-    path:"myVote",
-    component:MyVoteComponent,
+    path: 'searchs',
+    component: SearchsComponent,
   },
   {
-    path:"threeSearch",
-    component:ThreeSearchComponent,
+    path: 'result',
+    component: ResultComponent,
   },
   {
-    path:"search",
-    component:SearchComponent,
-  }
+    path: 'votes',
+    component: RatedMoviesComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

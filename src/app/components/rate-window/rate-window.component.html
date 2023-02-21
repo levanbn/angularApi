@@ -1,0 +1,50 @@
+<div class="screen">
+  <div class="container">
+    <img
+      src="assets/big-star.svg"
+      alt="big blue star icon"
+      class="big-star"
+      [ngStyle]="{
+        width: starWidth + 'px',
+        height: starHeight + 'px',
+        top: starPosition + 'px'
+      }"
+    />
+    <span [ngStyle]="{ 'font-size': fontSize }">{{
+      !ratingClicked ? "?" : voteNumber
+    }}</span>
+    <div class="closeBtn" (click)="closeFn()">x</div>
+    <h4>rate this</h4>
+    <h1>{{ movieName }}</h1>
+    <div class="stars">
+      <button
+        *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+        (click)="rating(i)"
+      >
+        <img
+          src="assets/big-star.svg"
+          alt="voting star icon"
+          [ngStyle]="{ filter: shouldHighlightStar(i) ? starColor : 'none' }"
+        />
+      </button>
+    </div>
+    <div class="cont">
+      <textarea
+        name=""
+        id=""
+        class="textArea"
+        maxlength="415"
+        placeholder="Review.."
+        [(ngModel)]="inputValue"
+      ></textarea>
+      <button
+        class="rate-button"
+        [ngClass]="{ clicked: ratingClicked && inputValue }"
+        (click)="voted()"
+        routerLink="../votes"
+      >
+        Rate
+      </button>
+    </div>
+  </div>
+</div>

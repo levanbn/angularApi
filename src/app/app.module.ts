@@ -1,30 +1,30 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './components/search/search.component';
+import { InputComponent } from './components/input/input.component';
+import { RateWindowComponent } from './components/rate-window/rate-window.component';
+import { RatedMoviesComponent } from './components/rated-movies/rated-movies.component';
 import { ResultComponent } from './components/result/result.component';
-import { MyVoteComponent } from './components/my-vote/my-vote.component';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ThreeSearchComponent } from './components/three-search/three-search.component';
+import { BigNumberPipe } from './pipes/bigNumber.pipe';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import { SearchsComponent } from './components/searchs/searchs.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
+    InputComponent,
+    RateWindowComponent,
+    RatedMoviesComponent,
     ResultComponent,
-    MyVoteComponent,
-    ThreeSearchComponent,
-    HomeComponent
+    BigNumberPipe,
+    HomeComponent,
+    SearchsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

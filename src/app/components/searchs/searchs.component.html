@@ -1,0 +1,10 @@
+<input type="text" [formControl]="first" />
+<input type="text" [formControl]="second" />
+<input type="text" [formControl]="third" />
+<button (click)="send()">enter</button>
+<ng-container *ngIf="minutesLength$ | async as bla">
+  <p>The length of all the movies combined in minutes: {{ bla }}</p>
+</ng-container>
+<ng-container *ngIf="population$ | async as bla">
+    <p>Sum of population of all the countries in which the movies where made: {{ bla }}</p>
+  </ng-container>

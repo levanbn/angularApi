@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchComponent } from './search.component';
+import { RateWindowComponent } from './rate-window.component';
 
-describe('SearchComponent', () => {
-  let component: SearchComponent;
-  let fixture: ComponentFixture<SearchComponent>;
+describe('RateWindowComponent', () => {
+  let component: RateWindowComponent;
+  let fixture: ComponentFixture<RateWindowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchComponent ]
+      declarations: [ RateWindowComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SearchComponent);
+    fixture = TestBed.createComponent(RateWindowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

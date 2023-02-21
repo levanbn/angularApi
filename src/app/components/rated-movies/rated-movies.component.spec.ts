@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThreeSearchComponent } from './three-search.component';
+import { RatedMoviesComponent } from './rated-movies.component';
 
-describe('ThreeSearchComponent', () => {
-  let component: ThreeSearchComponent;
-  let fixture: ComponentFixture<ThreeSearchComponent>;
+describe('RatedMoviesComponent', () => {
+  let component: RatedMoviesComponent;
+  let fixture: ComponentFixture<RatedMoviesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThreeSearchComponent ]
+      declarations: [ RatedMoviesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ThreeSearchComponent);
+    fixture = TestBed.createComponent(RatedMoviesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
