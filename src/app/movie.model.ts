@@ -3,6 +3,7 @@ export interface result {
 }
 
 export interface movieInOverall {
+  Country: any;
   Title: string;
   Year: string | number;
   imdbID: string;

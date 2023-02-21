@@ -10,6 +10,7 @@ import {
   Observable,
   reduce,
   switchMap,
+  of
 } from 'rxjs';
 import { MovieApiService } from 'src/app/movie-api.service';
 @Component({
@@ -39,20 +40,35 @@ export class SearchsComponent implements OnInit {
           .pipe(map((result) => result.Search[0].imdbID))
     );
 
-    forkJoin(movieObservables)
-      .pipe(switchMap((imdbIds) => this.api.getMovieDetailsForIds(imdbIds)))
-      .subscribe((details) => {
-        console.log(details);
-      });
+      forkJoin(movieObservables)
+        .pipe(
+          switchMap((imdbIds) => this.api.getMovieDetailsForIds(imdbIds)),
+          map((movies) => movies.map((movie) => Number(movie.Runtime.split(' ')[0]))),
+          tap((value) => console.log(`Received value: ${value}`)),
+          reduce((acc, curr) => acc + curr, 0),
+        )
+        .subscribe((details) => {
+          console.log(details);
+        });
 
-    /*
-    this.country$ = concat(
-      this.firstMovie$,
-      this.secondMovie$,
-      this.thirdMovie$
-    ).pipe(switchMap((x) => this.api.getCountyDetails(x.Country)));
-    this.population$ = this.country$.pipe(map((x) => x[0].population));
-    this.population$.pipe(reduce((acc, curr) => acc + curr, 0));
-    */
+        const movieObservables2 = [this.first, this.second, this.third].map(
+          (title) =>
+            this.api
+              .movieSearch(title)
+              .pipe(map((result) => result.Search[0].imdbID))
+        );
+        forkJoin(movieObservables2)
+        .pipe(
+          switchMap((imdbIds) => this.api.getMovieDetailsForIds(imdbIds)),
+          map((movies) => movies.map((movie) => movie.Country)),
+          switchMap((country) => this.api.getCountyDetails(country)),
+          map((country) =>  country.population)),
+          reduce((acc, curr) => acc + curr, 0),
+          tap((value) => console.log(`Received value: ${value}`)),
+        )
+        .subscribe((details) => {
+          console.log(details);
+        });
+
   }
 }
