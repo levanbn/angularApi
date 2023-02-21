@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 import { movieInDetails, result } from './movie.model';
 
 const API_BASE = 'https://www.omdbapi.com/?apikey=c10494d2';
@@ -21,6 +21,11 @@ export class MovieApiService {
 
   getMovieDetails(movieID: string): Observable<movieInDetails> {
     return this.http.get<movieInDetails>(`${API_BASE}&i=${movieID}`);
+  }
+
+  getMovieDetailsForIds(imdbIds: string[]): Observable<movieInDetails[]> {
+    const requests = imdbIds.map(id => this.getMovieDetails(id));
+    return forkJoin(requests);
   }
 
   getCountyDetails(countryName: string) {
