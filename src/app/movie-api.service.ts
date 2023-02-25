@@ -33,7 +33,9 @@ export class MovieApiService {
       `${COUNTY_BASE}/v3.1/name/${countryName}?fullText=true`
     );
   }
-
+  getCountryList(): Observable<any> {
+    return this.http.get<any>(`${COUNTY_BASE}/v3.1/all`);
+  }
   getMyList() {
     return this.http.get(`${MY_API_BASE}/movies`);
   }

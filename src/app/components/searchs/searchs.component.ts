@@ -13,11 +13,13 @@ import {
   of
 } from 'rxjs';
 import { MovieApiService } from 'src/app/movie-api.service';
+
 @Component({
   selector: 'app-searchs',
   templateUrl: './searchs.component.html',
   styleUrls: ['./searchs.component.scss'],
 })
+
 export class SearchsComponent implements OnInit {
   first: string = '';
   second: string = '';
@@ -39,7 +41,7 @@ export class SearchsComponent implements OnInit {
           .movieSearch(title)
           .pipe(map((result) => result.Search[0].imdbID))
     );
-
+/*
       forkJoin(movieObservables)
         .pipe(
           switchMap((imdbIds) => this.api.getMovieDetailsForIds(imdbIds)),
@@ -69,6 +71,7 @@ export class SearchsComponent implements OnInit {
         .subscribe((details) => {
           console.log(details);
         });
-
+*/
   }
 }
+

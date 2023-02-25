@@ -6,12 +6,12 @@ import { InputComponent } from './components/input/input.component';
 import { RateWindowComponent } from './components/rate-window/rate-window.component';
 import { RatedMoviesComponent } from './components/rated-movies/rated-movies.component';
 import { ResultComponent } from './components/result/result.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BigNumberPipe } from './pipes/bigNumber.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { SearchsComponent } from './components/searchs/searchs.component';
-
+import { AddMovieComponent } from './components/add-movie/add-movie.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +22,13 @@ import { SearchsComponent } from './components/searchs/searchs.component';
     BigNumberPipe,
     HomeComponent,
     SearchsComponent,
+    AddMovieComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [   BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
