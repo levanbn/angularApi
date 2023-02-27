@@ -16,9 +16,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class GenresComponent implements ControlValueAccessor {
   genres: string[] = [
     'Comedy',
-    'Science fiction',
     'Romance',
-    'Musical',
     'Drama',
     'Crime',
     'Action',
