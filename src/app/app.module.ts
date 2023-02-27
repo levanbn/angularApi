@@ -9,9 +9,12 @@ import { ResultComponent } from './components/result/result.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BigNumberPipe } from './pipes/bigNumber.pipe';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './components/home/home.component';
-import { SearchsComponent } from './components/searchs/searchs.component';
-import { AddMovieComponent } from './components/add-movie/add-movie.component';
+import { PlanMovieComponent } from './components/plan-movie/plan-movie.component';
+import { CountriesPipe, PremieresPipe } from './pipes/countries.pipe';
+import { RatingComponent } from './components/rating/rating.component';
+import { GenresComponent } from './components/genres/genres.component';
+import { MyMoviesComponent } from './components/my-movies/my-movies.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,16 +23,21 @@ import { AddMovieComponent } from './components/add-movie/add-movie.component';
     RatedMoviesComponent,
     ResultComponent,
     BigNumberPipe,
-    HomeComponent,
-    SearchsComponent,
-    AddMovieComponent,
+    PlanMovieComponent,
+    CountriesPipe,
+    PremieresPipe,
+    RatingComponent,
+    GenresComponent,
+    MyMoviesComponent,
   ],
-  imports: [   BrowserModule,
+  imports: [
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule,],
-  providers: [],
+    ReactiveFormsModule,
+  ],
+  providers: [RatingComponent, GenresComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

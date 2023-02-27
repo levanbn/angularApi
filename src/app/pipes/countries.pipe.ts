@@ -4,7 +4,7 @@ import { MovieApiService } from '../movie-api.service';
 import { CountryList } from '../movie.model';
 
 @Pipe({ name: 'countries' })
-export class CountriesPipe implements PipeTransform, OnInit {
+export class CountriesPipe implements PipeTransform {
   countriesResult$: Observable<CountryList[]> | undefined =
     this.api.getCountryList();
   countryNames: string[] = [];
@@ -21,14 +21,15 @@ export class CountriesPipe implements PipeTransform, OnInit {
       .subscribe();
   }
 
-  ngOnInit() {}
-
   transform(
     arr: any,
     used: (string | null)[] | undefined,
     self: string | null
   ): string[] {
-    return this.countryNames.filter((x) => {
+    const sortedCountryNames = this.countryNames.sort((a, b) =>
+      a.localeCompare(b)
+    );
+    return sortedCountryNames.filter((x) => {
       if (!used?.includes(x) || x === self) {
         return true;
       }
@@ -60,7 +61,10 @@ export class PremieresPipe implements PipeTransform, OnInit {
     used: (string | null)[] | undefined,
     self: string | null
   ): string[] {
-    return this.premiereNames.filter((x) => {
+    const sortedCountryNames = this.premiereNames.sort((a, b) =>
+      a.localeCompare(b)
+    );
+    return sortedCountryNames.filter((x) => {
       if (!used?.includes(x) || x === self) {
         return true;
       }
