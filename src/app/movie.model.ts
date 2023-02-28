@@ -57,8 +57,8 @@ export interface CountryFlag {
 }
 
 export enum MovieType {
-  Movie = 'Movie',
-  Series = 'Series',
+  Movie = 'Movie 🎥',
+  Series = 'Series 🎬',
 }
 
 export interface RegisterMovie {
