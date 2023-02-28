@@ -64,5 +64,60 @@
       "myReview": "wef",
       "id": 2
     }
-  ]
+  ],
+  "myMovies" :[  {
+    "movieName": null,
+    "movieType": "Movie",
+    "seriesEpisodesNum": null,
+    "movieRuntime": null,
+    "movieReleaseDate": null,
+    "movieCountries": [
+      ""
+    ],
+    "moviePremierePlace": [
+      ""
+    ],
+    "movieRating": null,
+    "movieGenre": [
+      "Adventure"
+    ],
+    "id": 1
+  },
+  {
+    "movieName": null,
+    "movieType": "Movie",
+    "seriesEpisodesNum": null,
+    "movieRuntime": null,
+    "movieReleaseDate": null,
+    "movieCountries": [
+      ""
+    ],
+    "moviePremierePlace": [
+      ""
+    ],
+    "movieRating": null,
+    "movieGenre": [
+      "Crime"
+    ],
+    "id": 2
+  },
+  {
+    "movieName": null,
+    "movieType": "Movie",
+    "seriesEpisodesNum": null,
+    "movieRuntime": null,
+    "movieReleaseDate": null,
+    "movieCountries": [
+      ""
+    ],
+    "moviePremierePlace": [
+      ""
+    ],
+    "movieRating": null,
+    "movieGenre": [
+      "Drama",
+      "Adventure"
+    ],
+    "id": 3
+  }]
 }
