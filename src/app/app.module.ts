@@ -14,6 +14,7 @@ import { CountriesPipe, PremieresPipe } from './pipes/countries.pipe';
 import { RatingComponent } from './components/rating/rating.component';
 import { GenresComponent } from './components/genres/genres.component';
 import { MyMoviesComponent } from './components/my-movies/my-movies.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MyMoviesComponent } from './components/my-movies/my-movies.component';
     RatingComponent,
     GenresComponent,
     MyMoviesComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

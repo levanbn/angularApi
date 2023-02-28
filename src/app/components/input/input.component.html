@@ -4,11 +4,6 @@
       <input type="text" [(ngModel)]="content" />
       <button (click)="search()">Search</button>
     </div>
-    <div class="right">
-      <button routerLink="votes">My votes</button>
-      <button routerLink="my movies">My movies</button>
-      <button routerLink="movie plan">Plan a movie</button>
-    </div>
   </div>
 
   <ng-container *ngIf="searched">

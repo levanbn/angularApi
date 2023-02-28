@@ -13,7 +13,7 @@
         *ngIf="form.controls['movieName'].errors['required']"
         [ngStyle]="{ color: '#F00' }"
       >
-        Please enter information
+        Please Enter Information
       </p>
       <p
         class="error name-min-error"
@@ -34,7 +34,7 @@
         *ngIf="form.controls['movieName'].errors['usedName']"
         [ngStyle]="{ color: '#F00' }"
       >
-        Movie name already used
+        Movie Name Already Used
       </p>
     </ng-container>
   </div>
@@ -84,7 +84,7 @@
         (click)="addCountry()"
         [disabled]="CountriesLength === 5"
       >
-        Add countries
+        Add Countries
       </button>
     </div>
   </div>
@@ -136,7 +136,7 @@
         (click)="addPremiere()"
         [disabled]="PremieresLength === 10"
       >
-        Add premieres
+        Add Premieres
       </button>
     </div>
   </div>
@@ -184,7 +184,7 @@
         *ngIf="form.controls['seriesEpisodesNum'].errors['required']"
         [ngStyle]="{ color: '#F00' }"
       >
-        Please enter information
+        Please Enter Information
       </p>
     </ng-container>
   </div>
@@ -200,7 +200,7 @@
         *ngIf="form.controls['movieRuntime'].errors['required']"
         [ngStyle]="{ color: '#F00' }"
       >
-        Please enter information
+        Please Enter Information
       </p>
       <p
         class="error runtime-min-error"
@@ -229,7 +229,7 @@
         *ngIf="form.controls['movieGenre'].errors['genresEmpty']"
         [ngStyle]="{ color: '#F00' }"
       >
-        the movie should be at least one genre
+        The movie should be at least one genre
       </p>
     </ng-container>
   </div>
@@ -252,7 +252,7 @@
         *ngIf="form.controls['movieReleaseDate'].errors['required']"
         [ngStyle]="{ color: '#F00' }"
       >
-        Please enter information
+        Please Enter Information
       </p>
     </ng-container>
   </div>
@@ -265,7 +265,7 @@
         *ngIf="form.controls['movieRating'].errors['min']"
         [ngStyle]="{ color: '#F00' }"
       >
-        rating minimum is 1
+        Rating minimum is 1
       </p>
     </ng-container>
   </div>
@@ -279,6 +279,6 @@
   <span
     *ngIf="isSubmitted && form.invalid"
     [ngStyle]="{ margin: ' 0 0 0 10px', color: '#F00' }"
-    >Please enter the correct information</span
+    >Please Enter The Correct Information</span
   >
 </form>
