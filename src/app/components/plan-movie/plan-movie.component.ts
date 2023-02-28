@@ -79,7 +79,7 @@ export class PlanMovieComponent implements OnInit {
 
   private handleMovietype(x: any) {
     switch (x) {
-      case 'Movie': {
+      case 'Movie 🎥': {
         this.form.addControl(
           'movieRuntime',
           this.fb.control('', [
@@ -91,7 +91,7 @@ export class PlanMovieComponent implements OnInit {
         this.form.removeControl('seriesEpisodesNum');
         break;
       }
-      case 'Series': {
+      case 'Series 🎬': {
         this.form.addControl(
           'seriesEpisodesNum',
           this.fb.control('', [Validators.required])
