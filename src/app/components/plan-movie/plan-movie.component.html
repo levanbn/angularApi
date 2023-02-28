@@ -3,7 +3,7 @@
   (ngSubmit)="onSubmit()"
   [class.submitted]="isSubmitted"
 >
-  <button routerLink="">Go back</button>
+  <button class="goBack" routerLink="">⬅ Go back</button>
   <div class="inputContainer NameInput">
     <label for="movieName">Movie Name:</label>
     <input type="text" id="movieName" formControlName="movieName" />
@@ -78,6 +78,7 @@
       </div>
 
       <button
+        class="add"
         type="button"
         [ngStyle]="{ margin: '10px 0 0' }"
         [ngClass]="{ pointerCursor: !(CountriesLength === 5) }"
@@ -119,6 +120,7 @@
           </option>
         </select>
         <button
+          class="btn1"
           type="button"
           [ngStyle]="{ margin: '0 0 0 10px' }"
           [ngClass]="{ pointerCursor: PremieresLength !== 1 }"
@@ -131,6 +133,7 @@
 
       <button
         type="button"
+        class="btn2"
         [ngStyle]="{ margin: '10px 0 0' }"
         [ngClass]="{ pointerCursor: !(PremieresLength === 10) }"
         (click)="addPremiere()"
@@ -270,11 +273,12 @@
     </ng-container>
   </div>
   <button
+  class="submit"
     type="submit"
     [ngClass]="{ pointerCursor: true }"
     [ngStyle]="{ margin: '0 0 10px' }"
   >
-    Submit
+    Submit ➡
   </button>
   <span
     *ngIf="isSubmitted && form.invalid"

@@ -1,6 +1,35 @@
 form {
   margin: 10px;
-
+  .CountriesInput{
+    .selectAdd{
+      .selectDiv{
+        button{
+          background-color: red;
+          color: white;
+          border-radius: 5px;
+        }
+      }
+      .add{
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+  }
+  .PremieresInput{
+    .selectAdd{
+      .btn1{
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+      }
+      .btn2{
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+  }
   .inputContainer {
     display: flex;
     flex-direction: column;
@@ -33,6 +62,16 @@ form {
   .pointerCursor {
     cursor: pointer;
   }
+  .submit{
+    background-color: rgb(71, 71, 224);
+    color: white;
+    border-radius: 5px;
+  }
+  .goBack{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+  }
 }
 
 .submitted {
@@ -47,3 +86,4 @@ form {
 button {
   cursor: pointer;
 }
+
