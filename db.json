@@ -65,59 +65,29 @@
       "id": 2
     }
   ],
-  "myMovies" :[  {
-    "movieName": null,
-    "movieType": "Movie",
-    "seriesEpisodesNum": null,
-    "movieRuntime": null,
-    "movieReleaseDate": null,
-    "movieCountries": [
-      ""
-    ],
-    "moviePremierePlace": [
-      ""
-    ],
-    "movieRating": null,
-    "movieGenre": [
-      "Adventure"
-    ],
-    "id": 1
-  },
-  {
-    "movieName": null,
-    "movieType": "Movie",
-    "seriesEpisodesNum": null,
-    "movieRuntime": null,
-    "movieReleaseDate": null,
-    "movieCountries": [
-      ""
-    ],
-    "moviePremierePlace": [
-      ""
-    ],
-    "movieRating": null,
-    "movieGenre": [
-      "Crime"
-    ],
-    "id": 2
-  },
-  {
-    "movieName": null,
-    "movieType": "Movie",
-    "seriesEpisodesNum": null,
-    "movieRuntime": null,
-    "movieReleaseDate": null,
-    "movieCountries": [
-      ""
-    ],
-    "moviePremierePlace": [
-      ""
-    ],
-    "movieRating": null,
-    "movieGenre": [
-      "Drama",
-      "Adventure"
-    ],
-    "id": 3
-  }]
+  "myMovies": [
+    {
+      "movieName": "red zone",
+      "movieType": "Movie 🎥",
+      "seriesEpisodesNum": null,
+      "movieRuntime": 111,
+      "movieReleaseDate": "2023-03-29",
+      "movieCountries": [
+        "Algeria",
+        "Antarctica"
+      ],
+      "moviePremierePlace": [
+        "Anguilla",
+        "Cook Islands"
+      ],
+      "movieRating": 10,
+      "movieGenre": [
+        "Crime ☠",
+        "History ⚔",
+        "Action 🎭",
+        "Comedy 😂"
+      ],
+      "id": 1
+    }
+  ]
 }

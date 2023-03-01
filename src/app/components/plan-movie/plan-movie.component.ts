@@ -5,7 +5,6 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { map } from 'rxjs';
 import { MovieApiService } from 'src/app/movie-api.service';
 import { RegisterMovie, MovieType } from 'src/app/movie.model';
 import { dateValidator, takenName } from 'src/app/app.validator';
@@ -26,7 +25,7 @@ export class PlanMovieComponent implements OnInit {
 
   onSubmit() {
     this.isSubmitted = true;
-    if (this.form.status !== 'INVALID') {
+    if (this.form.valid ) {
       this.api
         .saveMyMovie({
           movieName: this.form.value.movieName || null,

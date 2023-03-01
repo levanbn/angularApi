@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { filter, Observable, map,tap } from 'rxjs';
 import { AddMyMovie, CountryList, movieInDetails, result } from './movie.model';
 
 const API_BASE = 'https://www.omdbapi.com/?apikey=c10494d2';
